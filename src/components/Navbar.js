@@ -5,11 +5,11 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav
-        className={`navbar navbar-expand-lg bg-${this.props.mode}`}
+        className={`navbar fixed-top navbar-expand-lg bg-${this.props.mode}`}
         data-bs-theme={`${this.props.mode}`}
       >
         <div className="container-fluid">
-          <Link  className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/">
             {this.props.title}
           </Link>
           <button
@@ -21,12 +21,12 @@ export default class Navbar extends Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-          <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link  className="nav-link active" aria-current="page" to="/">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
                 </Link>
               </li>
@@ -83,9 +83,8 @@ export default class Navbar extends Component {
             </button>
           </form> */}
             <div
-              className={`form-check form-switch text-${
-                this.props.mode === "light" ? "dark" : "light"
-              }`}
+              className={`form-check form-switch text-${this.props.mode === "light" ? "dark" : "light"
+                }`}
             >
               <input
                 className="form-check-input"
