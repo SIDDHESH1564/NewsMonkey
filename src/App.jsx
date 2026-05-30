@@ -1,13 +1,13 @@
 import "./App.css";
 import React, { Component } from "react";
-import Navbar from "./components/Navbar";
-import News from "./components/News";
+import Navbar from "./components/Navbar.jsx";
+import News from "./components/News.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
 export default class App extends Component {
   pageSize = 8;
-  apikey = process.env.REACT_APP_NEWS_API
+  apikey = import.meta.env.VITE_NEWS_API;
   constructor(props) {
     super(props);
     this.state = {
@@ -26,11 +26,9 @@ export default class App extends Component {
     if (this.state.mode === "light") {
       this.setState({ mode: "dark" });
       document.body.style.backgroundColor = "#1a2026";
-      // this.showAlert("Dark mode has been enabled", "success");
     } else {
       this.setState({ mode: "light" });
       document.body.style.backgroundColor = "white";
-      // this.showAlert("Light mode has been enabled", "success");
     }
   };
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-export default class spinner extends Component {
+export default class Spinner extends Component {
   render() {
     return (
       <div>
